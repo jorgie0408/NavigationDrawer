@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- GROUP UTAMA -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="HOME"/>
+
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_person"
+            android:title="PROFILE"/>
+
+        <item
+            android:id="@+id/settingFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="SETTING"/>
+
+    </group>
+
+    <!-- GROUP CONFIDENTIAL -->
+    <item android:title="CONFIDENTIAL">
+
+        <menu>
+
+            <item
+                android:id="@+id/loginItem"
+                android:icon="@drawable/ic_lock"
+                android:title="LOGIN"/>
+
+        </menu>
+
+    </item>
+
+</menu>
