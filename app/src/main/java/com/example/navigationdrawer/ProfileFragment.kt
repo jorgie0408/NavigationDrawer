@@ -18,7 +18,6 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentProfileBinding.inflate(
             inflater,
             container,
@@ -34,8 +33,8 @@ class ProfileFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
 
+        // NAVIGATION MENGGUNAKAN BUNDLE
         binding.buttonOpen.setOnClickListener {
-
             val mBundle = Bundle()
             mBundle.putString("param1", "AMBO")
 
@@ -45,12 +44,12 @@ class ProfileFragment : Fragment() {
             )
         }
 
+        // NAVIGATION MENGGUNAKAN SAFE ARGS
         binding.buttonOpenSafe.setOnClickListener {
-
             val action =
                 ProfileFragmentDirections
                     .actionProfileFragmentToDetailProfileFragment(
-                        dataSatu = "AMBO@gmail.com"
+                        "AMBO@gmail.com"
                     )
 
             findNavController().navigate(action)
